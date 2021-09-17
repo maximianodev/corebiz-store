@@ -3,7 +3,7 @@
 ## Sobre o projeto 📖
 Aplicação feita com as seguintes tecnologias:
 - React
-- Sass
+- Styles-components
 
 ## Configurações 🛠
 **Como rodar o projeto?**
