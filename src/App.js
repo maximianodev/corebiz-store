@@ -3,6 +3,7 @@ import { useDevice } from "react-use-device";
 // Components
 import HeaderDesktop from "components/HeaderDesktop/index";
 import HeaderMobile from "components/HeaderMobile";
+import Footer from "components/Footer";
 
 function App() {
   const { isTABLET, isMOBILE } = useDevice();
@@ -14,6 +15,7 @@ function App() {
         <HeaderMobile /> :
         <HeaderDesktop />
       }
+      <Footer />
     </div>
   );
 }
