@@ -1,8 +1,19 @@
+import { useDevice } from "react-use-device";
+
+// Components
+import HeaderDesktop from "components/HeaderDesktop/index";
+import HeaderMobile from "components/HeaderMobile";
+
 function App() {
+  const { isTABLET, isMOBILE } = useDevice();
 
   return (
     <div className="App">
-      Opa
+      {(isTABLET || isMOBILE)
+        ?
+        <HeaderMobile /> :
+        <HeaderDesktop />
+      }
     </div>
   );
 }

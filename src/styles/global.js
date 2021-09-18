@@ -2,6 +2,7 @@ import { createGlobalStyle, css } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
  ${({ theme }) => css`
+    /* Reset */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -20,14 +21,6 @@ export const GlobalStyle = createGlobalStyle`
         color: ${theme.colors.light};
       } 
     }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      @media(max-width: 1023px) {
-        max-width: 100%;
-        margin: unset;
-      }
-    }
     img {
       max-width: 100%;
       height: auto;
@@ -43,4 +36,26 @@ export const GlobalStyle = createGlobalStyle`
       }
     }
   `}
+  /* Reset */
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    @media(max-width: 1023px) {
+      max-width: 100%;
+      margin: unset;
+    }
+  }
+  .df {
+    display: flex;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: space-center;
+  }
+  .items-center {
+    align-items: center;
+  }
 `
