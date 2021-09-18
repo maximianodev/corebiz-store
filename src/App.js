@@ -1,20 +1,23 @@
-import { useDevice } from "react-use-device";
+//utils
+import { data } from 'utils/sliderItems'
 
-// Components
-import HeaderDesktop from "components/HeaderDesktop/index";
-import HeaderMobile from "components/HeaderMobile";
+// components
+import Header from "components/Header";
+import InfoCardListContext from "components/InfoCardListContext";
+import HomeShelf from "components/HomeShelf";
 import Footer from "components/Footer";
 
 function App() {
-  const { isTABLET, isMOBILE } = useDevice();
-
   return (
     <div className="App">
-      {(isTABLET || isMOBILE)
-        ?
-        <HeaderMobile /> :
-        <HeaderDesktop />
-      }
+      <Header />
+      <div className="AppContent">
+        <InfoCardListContext
+          infoCards={data.infoCards}
+          sliderSettings={data.sliderSettings}
+        />
+        <HomeShelf />
+      </div>
       <Footer />
     </div>
   );

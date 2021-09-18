@@ -1,4 +1,6 @@
 import { createGlobalStyle, css } from "styled-components";
+import LeftArrow from 'assets/icons/left-arrow.svg'
+import RightArrow from 'assets/icons/right-arrow.svg'
 
 export const GlobalStyle = createGlobalStyle`
  ${({ theme }) => css`
@@ -62,8 +64,106 @@ export const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    > {
-      
+    .AppContent {
+      flex: 1;
     }
   }
+  /* Slick */
+  .slick-slider {
+        position: relative;
+        .slick-prev {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            left: 30px;
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+            background-image: unset;
+            border: 0;
+            cursor: pointer;
+            font-size: 0;
+            @media(max-width: 1023px) {
+              left: 15px;
+            }
+            &::before {
+                content: "";
+                display: block;
+                width: inherit;
+                height: inherit;
+                background: url(${LeftArrow}) no-repeat center;
+                background-size: contain;
+            }
+        }
+        .slick-list {
+          overflow: hidden;
+            .slick-track {
+                display: flex;
+                .slick-slide {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .slick-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            right: 30px;
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+            background-image: unset;
+            border: 0;
+            cursor: pointer;
+            font-size: 0;
+            @media(max-width: 1023px) {
+                right: 15px;
+            }
+            &::before {
+                content: "";
+                display: block;
+                width: inherit;
+                height: inherit;
+                background: url(${RightArrow}) no-repeat center;
+                background-size: contain;
+            }
+        }
+        
+        .slick-dots {
+            bottom: 30px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex !important;
+            align-items: center;
+            list-style-type: none;
+            li {
+              margin: 0;
+              &:not(:last-child) {
+                margin-right: 10px;
+              } 
+              button {
+                  border: 0;
+                  font-size: 0;
+                  width: 10px;
+                  height: 10px;
+                  cursor: pointer;
+                  background-color: #BDBDBD;
+                  border-radius: 100%;
+                  transition: all .3s ease;
+                }
+            }
+            .slick-active {
+                button {
+                  background-color: ${({ theme }) => theme.colors.primary};
+                }
+            }
+            
+        }
+    }
+  /* Slick */
 `;
