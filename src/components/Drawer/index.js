@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 // styles
-import * as S from './styles'
+import * as S from './styles';
 // assets
-import DrawerIcon from 'assets/icons/drawer.svg'
+import DrawerIcon from 'assets/icons/drawer.svg';
 
 function Drawer() {
   return (
@@ -12,4 +12,4 @@ function Drawer() {
   )
 }
 
-export default Drawer
+export default Drawer;

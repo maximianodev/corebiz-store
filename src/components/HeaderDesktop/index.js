@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 // styles
-import * as S from './styles'
+import * as S from './styles';
 // components
-import Logo from 'components/Logo/index'
-import SearchBar from 'components/SearchBar'
-import MyAccount from 'components/MyAccount'
-import Minicart from 'components/Minicart'
+import Logo from 'components/Logo/index';
+import SearchBar from 'components/SearchBar';
+import MyAccount from 'components/MyAccount';
+import Minicart from 'components/Minicart';
 
 function HeaderDesktop() {
   return (
@@ -24,4 +24,4 @@ function HeaderDesktop() {
   )
 }
 
-export default HeaderDesktop
+export default HeaderDesktop;

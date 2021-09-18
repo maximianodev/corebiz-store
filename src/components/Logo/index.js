@@ -1,6 +1,6 @@
-import React from 'react'
-import * as S from './styles'
-import LogoImage from '../../assets/icons/corebiz-logo.svg'
+import React from 'react';
+import * as S from './styles';
+import LogoImage from '../../assets/icons/corebiz-logo.svg';
 
 const Logo = () => {
   return (
@@ -10,4 +10,4 @@ const Logo = () => {
   )
 }
 
-export default Logo
+export default Logo;

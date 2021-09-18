@@ -1,4 +1,4 @@
-import { api } from "./api"
+import { api } from "./api";
 
 export const postNewsletter = async (email, name) => {
   try {
@@ -10,4 +10,4 @@ export const postNewsletter = async (email, name) => {
   } catch (err) {
     return console.error("🚀 ~ file: getProducts.js ~ line 7 ~ getProducts ~ err", err)
   }
-}
+};

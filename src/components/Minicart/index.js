@@ -1,8 +1,8 @@
-import React from 'react'
-import * as S from './styles'
+import React from 'react';
+import * as S from './styles';
 
 // assets
-import MinicartIcon from 'assets/icons/cart.svg'
+import MinicartIcon from 'assets/icons/cart.svg';
 
 const Minicart = () => {
   return (
@@ -13,4 +13,4 @@ const Minicart = () => {
   )
 }
 
-export default Minicart
+export default Minicart;

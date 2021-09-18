@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const MinicartContainer = styled.button`
   background-color: transparent;
@@ -22,4 +22,4 @@ export const MinicartContainer = styled.button`
     color: #fff;
     font-size:  ${({theme}) => theme.font.sizes.small};
   }
-`
+`;

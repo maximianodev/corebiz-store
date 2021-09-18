@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const ButtonContainer = styled.button`
   background-color: transparent;
@@ -12,4 +12,4 @@ export const ButtonContainer = styled.button`
     line-height: 0;
     display: block;
   } 
-`
+`;

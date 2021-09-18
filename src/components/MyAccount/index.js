@@ -1,8 +1,8 @@
-import React from 'react'
-import * as S from './styles'
+import React from 'react';
+import * as S from './styles';
 
 // assets
-import UserIcon from 'assets/icons/user.svg'
+import UserIcon from 'assets/icons/user.svg';
 
 const MyAccount = () => {
   return (
@@ -13,4 +13,4 @@ const MyAccount = () => {
   )
 }
 
-export default MyAccount
+export default MyAccount;

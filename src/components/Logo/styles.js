@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const LogoIcon = styled.a`
   width: 160px;
@@ -10,4 +10,4 @@ export const LogoIcon = styled.a`
     width: 100%;
     height: auto;
   }
-`
+`;

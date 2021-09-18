@@ -1,4 +1,4 @@
-import { createGlobalStyle, css } from "styled-components"
+import { createGlobalStyle, css } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
  ${({ theme }) => css`
@@ -37,7 +37,6 @@ export const GlobalStyle = createGlobalStyle`
     }
   `}
   /* Reset */
-  
   .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -58,4 +57,13 @@ export const GlobalStyle = createGlobalStyle`
   .items-center {
     align-items: center;
   }
-`
+  .App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    > {
+      
+    }
+  }
+`;

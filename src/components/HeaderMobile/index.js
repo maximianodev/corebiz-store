@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 // styles
-import * as S from './styles'
+import * as S from './styles';
 // components
-import Logo from 'components/Logo/index'
-import SearchBar from 'components/SearchBar'
-import Minicart from 'components/Minicart'
-import Drawer from 'components/Drawer'
+import Logo from 'components/Logo/index';
+import SearchBar from 'components/SearchBar';
+import Minicart from 'components/Minicart';
+import Drawer from 'components/Drawer';
 
 function HeaderMobile() {
   return (
@@ -20,4 +20,4 @@ function HeaderMobile() {
   )
 }
 
-export default HeaderMobile
+export default HeaderMobile;

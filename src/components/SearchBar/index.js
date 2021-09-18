@@ -1,7 +1,7 @@
-import React from 'react'
-import * as S from './styles'
+import React from 'react';
+import * as S from './styles';
 //assets
-import MagnifyingGlassIcon from 'assets/icons/magnifying-glass.svg'
+import MagnifyingGlassIcon from 'assets/icons/magnifying-glass.svg';
 
 const SearchBar = () => {
   return (
@@ -14,4 +14,4 @@ const SearchBar = () => {
   )
 }
 
-export default SearchBar
+export default SearchBar;

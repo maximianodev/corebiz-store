@@ -1,4 +1,4 @@
-import { api } from "./api"
+import { api } from "./api";
 
 export const getProducts = async () => {
   try {
@@ -7,4 +7,4 @@ export const getProducts = async () => {
   } catch (err) {
     return console.error("🚀 ~ file: getProducts.js ~ line 7 ~ getProducts ~ err", err)
   }
-}
+};
