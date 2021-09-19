@@ -49,6 +49,7 @@ export const MinicartContainer = styled.div`
       .itemContainer {
         display: flex;
         align-items: center;
+        position: relative;
         &:not(:last-child) {
           margin-bottom: 30px;
         }
@@ -60,7 +61,6 @@ export const MinicartContainer = styled.div`
         .info {
           margin-left: 15px;
           padding: 15px;
-          position: relative;
           .clearItem {
             position: absolute;
             top: 0;

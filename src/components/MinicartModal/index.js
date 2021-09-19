@@ -24,6 +24,7 @@ const MinicartModal = () => {
     const removeItem = minicartData?.items?.filter(item => {
       return item.productId !== currentProduct.productId
     })
+    console.log("🚀 ~ file: index.js ~ line 27 ~ handleClearItem ~ removeItem", removeItem)
     setMinicartData({ items: removeItem, minicartOpen: true })
   }
 
