@@ -20,4 +20,5 @@ yarn build
 ```
 
 Bug Fix
-[] - Bug ao remover o item no minicart, ele não esta surtindo efeito na atualização e acaba que nao seta o novo valor no localSotrage, ver em `/src/contexts/Minicart.js linha 23 no useEffect`;
+[x] - Bug ao remover o item no minicart, ele não esta surtindo efeito na atualização e acaba que nao seta o novo valor no localSotrage, ver em `/src/contexts/Minicart.js linha 23 no useEffect`;
+    Solução: foi criado outro `useEffect` aparte para monitorar a atualização do state e setar o novo valor no localStorage

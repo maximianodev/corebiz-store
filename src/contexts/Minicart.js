@@ -10,6 +10,7 @@ let minicartInterface = {
 export default function MinicartProvider(props) {
   const [minicartData, setMinicartData] = useState();
 
+  
   useLayoutEffect(() => {
     let key = 'corebiz_store'
     const storageValue = localStorage.getItem(key)
@@ -23,6 +24,8 @@ export default function MinicartProvider(props) {
   }, [])
 
   useEffect(() => {
+    let key = 'corebiz_store'
+    localStorage.setItem(key, JSON.stringify(minicartData))
   }, [minicartData])
 
   return (
