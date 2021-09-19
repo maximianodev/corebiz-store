@@ -7,8 +7,9 @@ import InfoCardListContext from "components/InfoCardListContext";
 import HomeShelf from "components/HomeShelf";
 import Footer from "components/Footer";
 import Newsletter from "components/Newsletter";
-
 import MinicartProvider from 'contexts/Minicart';
+import MinicartModal from 'components/MinicartModal';
+
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         </div>
         <Newsletter />
         <Footer />
+        <MinicartModal />
       </MinicartProvider>
     </div>
   );
