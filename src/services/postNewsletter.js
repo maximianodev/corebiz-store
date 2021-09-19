@@ -1,6 +1,6 @@
 import { api } from "./api";
 
-export const postNewsletter = async (email, name) => {
+export const postNewsletter = async ({ email, name }) => {
   try {
     const response = await api.post("/newsletter", {
       email: email,
