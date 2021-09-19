@@ -26,4 +26,4 @@ Bug Fix
 [x] - Ao adicionar 2 produtos iguais no minicart, quando é removido um ele remove todos do mesmo tipo. 
     Solução: na chamada da função de remover, passei a posição do meu array
     
-[] - Adicionar valor total no minicart.
+[x] - Adicionar valor total no minicart.

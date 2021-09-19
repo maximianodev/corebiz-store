@@ -70,6 +70,28 @@ export const MinicartContainer = styled.div`
         }
       }
     }
+    .prices {
+      padding: 15px 0;
+      .containerInfo {
+        display: flex;
+        justify-content: space-between;
+        &:not(:first-child) {
+          margin-top: 10px;
+        }
+        span {
+          display: block;
+        }
+        &.total {
+          strong {
+            font-size: 18px;
+          }
+          span {
+            font-size: 18px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
     .cta {
       width: 100%;
       height: 50px;

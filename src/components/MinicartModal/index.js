@@ -7,13 +7,27 @@ import ProductInstallments from 'components/Shelf/ProductInstallments';
 import ProductReviews from 'components/Shelf/ProductReviews';
 import ProductPrice from 'components/Shelf/ProductPrice';
 import ProductName from 'components/Shelf/ProductName';
+import { formatPrice } from 'utils/formatPrice';
 
 const MinicartModal = () => {
   const { minicartData, setMinicartData } = useContext(MinicartContext);
   const [minicartContext, setMinicartContext] = useState()
+  const [totalPrice, setTotalPrice] = useState()
 
   useEffect(() => {
     setMinicartContext(minicartData)
+
+    if (minicartData) {
+      let totalPrice = {
+        listPrice: 0,
+        price: 0
+      }
+      minicartData.items?.map(item => {
+        totalPrice.price += item.price
+        return totalPrice.listPrice += item.listPrice
+      })
+      setTotalPrice(totalPrice)
+    }
   }, [minicartData])
 
   const handleCloseMinicart = () => {
@@ -28,6 +42,7 @@ const MinicartModal = () => {
   }
 
   if (!minicartContext) return null
+  if (!totalPrice) return null
   return (
     <S.MinicartContainer minicartContext={minicartContext}>
       <div className="overlay" onClick={handleCloseMinicart}></div>
@@ -47,6 +62,23 @@ const MinicartModal = () => {
                 <ProductInstallments priceInstallments={item.installments} />
               </div>
             </div>)}
+        </div>
+        <div className="prices">
+          {totalPrice?.listPrice > 0 &&
+            <>
+              <div className="containerInfo subtotal">
+                <strong>Subtotal:</strong> <span>{formatPrice(totalPrice?.listPrice)}</span>
+              </div>
+              <div className="containerInfo discount">
+                <strong>Descontos:</strong> <span>{formatPrice(totalPrice?.listPrice - totalPrice?.price)}</span>
+              </div>
+            </>
+          }
+          {totalPrice?.price > 0 &&
+            <div className="containerInfo total">
+              <strong>Total:</strong> <span>{formatPrice(totalPrice?.price)}</span>
+            </div>
+          }
         </div>
         <div className="cta">Ir para Checkout</div>
       </div>
