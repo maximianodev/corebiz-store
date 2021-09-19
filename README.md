@@ -1,6 +1,6 @@
 # Corebiz Store
 
-**link de acesso** - https://61468ec00f691d1bfc38a557--cranky-snyder-b22124.netlify.app/
+**link de acesso** - https://6147585d720ae600085a47fe--cranky-snyder-b22124.netlify.app/
 
 ## Sobre o projeto 📖
 Aplicação feita com as seguintes tecnologias:
