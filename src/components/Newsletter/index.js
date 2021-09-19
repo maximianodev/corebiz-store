@@ -2,56 +2,33 @@ import React, { useState } from 'react';
 import { postNewsletter } from 'services/postNewsletter';
 import * as S from './styles';
 
-const Input = (props) => {
-  const [currentClass, setCurrentClass] = useState("")
-
-  const handleChange = (event) => {
-
-    let name = event.target.id;
-    let value = event.target.value;
-
-    props?.formState?.setData({ ...props?.formState?.data, [name]: value });
-
-    if (!event.currentTarget.value) {
-      setCurrentClass("error")
-      props?.formState?.setError(true)
-    } else {
-      setCurrentClass("default")
-      props?.formState?.setError(false)
-    }
-  }
-
-  return (
-    <div className="inputContainer">
-      <input
-        type={props.type}
-        id={props.id}
-        placeholder={props.placeholder}
-        onChange={handleChange}
-        className={currentClass}
-      />
-      {currentClass === "error" && <span>Preencha com um {props.typeMessage} válido</span>}
-    </div>
-  )
-}
+// components
+import Input from './Input';
 
 const Newsletter = () => {
   const [error, setError] = useState(false)
-  const [data, setData] = useState(false)
+  const [data, setData] = useState()
   const [submit, setSubmit] = useState(false)
 
   const handleSubmit = (ev) => {
     ev.preventDefault()
     if (!error) {
-      postNewsletter(data).then(resp => {
-        console.log("🚀 ~ file: index.js ~ line 47 ~ postNewsletter ~ resp", resp.data)
-        setSubmit(true)
-      }).catch(err => {
-        console.error("🚀 ~ file: index.js ~ line 50 ~ postNewsletter ~ err", err)
-      })
-    } else {
-      window.alert("Preencha os campos com os dados corretos")
+      if (data) {
+        postNewsletter(data).then(resp => {
+          console.log("🚀 ~ file: index.js ~ line 47 ~ postNewsletter ~ resp", resp.data)
+          setSubmit(true)
+        }).catch(err => {
+          console.error("🚀 ~ file: index.js ~ line 50 ~ postNewsletter ~ err", err)
+        })
+      } else {
+        setError(true)
+      }
     }
+  }
+
+  const handleClearStates = () => {
+    setSubmit(false)
+    setData()
   }
 
   return (
@@ -61,7 +38,7 @@ const Newsletter = () => {
           <div className="success">
             <strong>Seu e-mail foi cadastrado com sucesso!</strong>
             <p>A partir de agora você receberá as novidade e ofertas exclusivas.</p>
-            <span onClick={() => setSubmit(false)}>Cadastrar novo e-mail</span>
+            <span onClick={handleClearStates}>Cadastrar novo e-mail</span>
           </div>
         </div>
         :
