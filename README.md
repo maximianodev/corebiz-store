@@ -22,5 +22,8 @@ yarn build
 Bug Fix
 [x] - Bug ao remover o item no minicart, ele não esta surtindo efeito na atualização e acaba que nao seta o novo valor no localSotrage, ver em `/src/contexts/Minicart.js linha 23 no useEffect`;
     Solução: foi criado outro `useEffect` aparte para monitorar a atualização do state e setar o novo valor no localStorage
-[] - Ao adicionar 2 produtos iguais no minicart, quando é removido um ele remove todos do mesmo tipo. 
+
+[x] - Ao adicionar 2 produtos iguais no minicart, quando é removido um ele remove todos do mesmo tipo. 
+    Solução: na chamada da função de remover, passei a posição do meu array
+    
 [] - Adicionar valor total no minicart.

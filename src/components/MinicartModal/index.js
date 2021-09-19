@@ -20,11 +20,10 @@ const MinicartModal = () => {
     setMinicartData({ items: minicartData.items, minicartOpen: false })
   }
 
-  const handleClearItem = (currentProduct) => {
-    const removeItem = minicartData?.items?.filter(item => {
-      return item.productId !== currentProduct.productId
+  const handleClearItem = (currentProduct, currentKeyIndex) => {
+    const removeItem = minicartData?.items?.filter((item, keyIndex) => {
+      return keyIndex !== currentKeyIndex
     })
-    console.log("🚀 ~ file: index.js ~ line 27 ~ handleClearItem ~ removeItem", removeItem)
     setMinicartData({ items: removeItem, minicartOpen: true })
   }
 
@@ -41,7 +40,7 @@ const MinicartModal = () => {
                 <img src={item?.imageUrl} alt={item?.productName} title={item?.productName} />
               </div>
               <div className="info">
-                <div className="clearItem" onClick={() => handleClearItem(item)}>X</div>
+                <div className="clearItem" onClick={() => handleClearItem(item, key)}>X</div>
                 <ProductName name={item.productName} />
                 <ProductReviews stars={item.stars} />
                 <ProductPrice price={item.price} listPrice={item.listPrice} />
